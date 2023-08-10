@@ -7,3 +7,6 @@ You an make the background color static by removing the function getRandomColor(
 function setRandomBackgroundColor(),
 setRandomBackgroundColor();
 or you can even modify the random color by modifying these functions.😊
+# copy- buttons
+I have added a copy button to clip the generated password..
+
