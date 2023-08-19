@@ -70,5 +70,15 @@ function setRandomBackgroundColor() {
     mainElement.style.backgroundColor = getRandomColor();
 }
 
+function copyText() {
+    var span = document.getElementById("pass-box");
+    var range = document.createRange();
+    range.selectNode(span);
+    window.getSelection().removeAllRanges();
+    window.getSelection().addRange(range);
+    document.execCommand("copy");
+    window.getSelection().removeAllRanges();
+    alert("Text copied to clipboard: " + span.textContent);
+}
 // Call the function to set the random background color on page load
 setRandomBackgroundColor();
