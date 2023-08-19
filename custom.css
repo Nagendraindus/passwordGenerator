@@ -3,12 +3,11 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: monospace,'Roboto', sans-serif;
 }
 
-input:focus-visible {
-    outline: 0;
-}
+
+
 
 .main {
     background-color: #9016e7;
@@ -16,26 +15,111 @@ input:focus-visible {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column; /* Set the layout to column */
+
+
+}
+
+
+
+
+/* Base styles for non-responsive elements */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+input:focus-visible {
+    outline: 0;
+}
+
+/* Styles for desktop or large screens */
+
+.hello {
+    text-align: center;
+    color: rgba(253, 249, 249, 0.188);
+    font-size: 80px;
+    font-weight: 500;
+    padding-top: 30px;
+    text-shadow: rgba(33, 32, 32, 0.795) 0px 3px 20px;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.gradient-text {
+
+    color: rgba(245, 248, 247, 0.252);
+    font-weight: bold;
 }
 
 .box {
     min-width: 400px;
     padding: 10px;
     box-shadow: 0 4px 10px rgb(0 0 0 / 50%);
-    background: #0aecce74;
+    background: rgba(245, 248, 247, 0.45);
     border-radius: 2px;
     margin-top: 10px;
+    backdrop-filter: blur(50%);
 }
 
 #pass-box {
     width: 100%;
     display: block;
-    background-color: rgba(11, 240, 167, 0.638);
+    background-color: rgba(241, 248, 246, 0.9);
     font-size: 30px;
     padding: 10px;
     border-radius: 4px;
     font-family: 'Courier New', Courier, monospace;
     font-weight: 400;
+}
+
+#copier {
+    align-items: center;
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "JetBrains Mono",monospace;
+    height: 30px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    margin-top: 9px;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+}
+
+#copier:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    }
+    
+#copier:hover {
+    background-color: black;
+    color:white;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+#copier:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
 }
 
 .row {
@@ -62,3 +146,28 @@ label {
     margin-top: 10px;
     border-radius: 5px;
 }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 600px) {
+    .box {
+        background: rgba(160, 236, 214, 0.9);
+        min-width: 90%;
+    }
+
+    .hello {
+        font-size: 20px;
+        font-weight: 200;
+    }
+    #pass-box{
+        font-size: 15px;
+    }
+
+    #copier{
+        height: 20px;
+        width: 10px;
+        font-size: smaller;
+    }
+}
+
+
+
